@@ -29,11 +29,24 @@
          <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BbeeuzU5Qc8?si=1VUGAlzaqLKjuTAA" allow="web-share" dir="" allowfullscreen></iframe></div>
          <div class='my-5'></div>
          <h1>Data Journey</h1>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eveniet fugit exercitationem earum quod. Ad doloribus dignissimos quaerat error aspernatur est, voluptatem deserunt at, dolores asperiores incidunt eligendi commodi sapiente.</p>
+         <br> 
+         <p>Cleaning, converting, and manipulating the data was no easy task! In this section, we’ll discuss all of the necessary steps we took to convert the original data source into a format suitable for manipulation and visualizations in Python.</p>
+         <br> 
+         <br> 
          <h5>Original Data Source</h2>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eveniet fugit exercitationem earum quod. Ad doloribus dignissimos quaerat error aspernatur est, voluptatem deserunt at, dolores asperiores incidunt eligendi commodi sapiente.</p>
+         <p>The original data source used in this project can be found in the data section of the LA City organization website, and it is titled “Crime Data from 2020 to Present”. The data source is in CSV format with over 840,000 rows and 28 columns, and new data is added to it weekly. For the analysis performed in this project, we were working with the datasource as it was on November 17th, 2023. Click <a href="https://data.lacity.org/Public-Safety/Crime-Data-from-2020-to-Present/2nrs-mtv8">here</a> to access the original data source!</p>
+         <br> 
+         <br> 
          <h5>Journey and Caveats</h2>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eveniet fugit exercitationem earum quod. Ad doloribus dignissimos quaerat error aspernatur est, voluptatem deserunt at, dolores asperiores incidunt eligendi commodi sapiente.</p>
+         <br> 
+         <h6>Partitioning the Data into Different CSVs</h6>
+            <p>With over 840,000 rows, the downloaded dataset in the LA City's original format was impractical to use unconverted. Thus, we made the decision to partition this large csv into multiple smaller files in order to streamline the file upload process within the Colab Notebook environment. This process was done largely in Microsoft Excel. We used column filters to create different csv files based on years in the dataset (2020, 2021, 2022, and 2023) and different types of crimes (e.g. sexual assaults).</p>
+         <br> 
+         <h6>Uploading the Data into Colab Notebooks</h6>
+            <p>We experimented with two different file upload methods in the Google Colab notebooks we created. The first method, which was used in the notebook that contains the first five questions' visualizations, involved importing the google colab "files" package and using the "files.upload" command to select a csv file from our respective computers' downloads. The other method, which was used for the notebook containing Question 6's visualization, used the file upload button (left icon) in the file menu (bottom left icon). We found that the latter method was significantly faster.</p>
+         <br> 
+         <h6>Creating Dataframes within Colab Notebooks </h6>
+            <p>After importing the csvs we created in Excel from the original dataset into our Colab Notebooks, we created Pandas dataframes to further narrow down our queries. This involved a variety of methods, such as boolean masking, the combination of lists with the same index length, for loops, and if-else statements.</p>
       </div>
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script><script src="js/main.js"></script>
    </body>
